@@ -114,8 +114,8 @@ var quotes = [
   "A champion is defined not by their wins but by how they can recover when they fall."
 ];
 
-var savedPosters = [];
-//var currentPoster;
+var savedPosters = ["something"];
+var currentPoster;
 
 // event listeners go here 👇
 window.addEventListener('load', getRandomPoster);
@@ -150,6 +150,8 @@ function showOwnPosterForm() {
 function showSavedPosterPage() {
   savedPosterPage.classList.remove("hidden");
   mainPoster.classList.add("hidden");
+  // console.log(savedPosters);
+  // saved-posters.classList.add("savedPosters");
 };
 
 function goBackToMainFromForm() {
@@ -163,9 +165,9 @@ function goBackToMainFromSaved() {
 };
 
 function makePosterDisplayPoster() {
-  var imageUrl = inputPosterImageUrl.value;
-  var posterTitle = inputPosterTitle.value;
-  var posterQuote = inputPosterQuote.value;
+ var imageUrl = inputPosterImageUrl.value;
+ var posterTitle = inputPosterTitle.value;
+ var posterQuote = inputPosterQuote.value;
       images.push(imageUrl);
       titles.push(posterTitle);
       quotes.push(posterQuote);
@@ -178,6 +180,6 @@ function makePosterDisplayPoster() {
 };
 
 function addSavedPoster() {
-  var currentPoster = new Poster(selectImg.src, selectTitle.innerHTML, selectQuote.innerHTML);
+  var currentPoster = new Poster(selectImg.src.value, selectTitle.innerHTML.value, selectQuote.innerHTML.value);
   savedPosters.push(currentPoster);
 };
