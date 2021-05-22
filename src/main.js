@@ -14,7 +14,7 @@ var inputPosterImageUrl = document.getElementById("poster-image-url");
 var inputPosterTitle = document.getElementById("poster-title");
 var inputPosterQuote = document.getElementById("poster-quote");
 var makePosterButton = document.querySelector(".make-poster");
-
+var saveThisPosterButton = document.querySelector(".save-poster");
 // we've provided you with some data to work with 👇
 var images = [
   "./assets/bees.jpg",
@@ -115,7 +115,7 @@ var quotes = [
 ];
 
 var savedPosters = [];
-var currentPoster;
+//var currentPoster;
 
 // event listeners go here 👇
 window.addEventListener('load', getRandomPoster);
@@ -128,6 +128,7 @@ makePosterButton.addEventListener('click', function(e) {
     e.preventDefault();
     makePosterDisplayPoster();
 });
+saveThisPosterButton.addEventListener('click', addSavedPoster);
 // functions and event handlers go here 👇
 // (we've provided one for you to get you started)!
 
@@ -160,6 +161,7 @@ function goBackToMainFromSaved() {
   mainPoster.classList.remove("hidden");
   savedPosterPage.classList.add("hidden");
 };
+
 function makePosterDisplayPoster() {
   var imageUrl = inputPosterImageUrl.value;
   var posterTitle = inputPosterTitle.value;
@@ -173,4 +175,9 @@ function makePosterDisplayPoster() {
       selectTitle.innerHTML = newPoster.title;
       selectQuote.innerHTML = newPoster.quote;
 
+};
+
+function addSavedPoster() {
+  var currentPoster = new Poster(selectImg.src, selectTitle.innerHTML, selectQuote.innerHTML);
+  savedPosters.push(currentPoster);
 };
