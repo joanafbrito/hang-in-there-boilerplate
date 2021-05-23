@@ -60,16 +60,16 @@ Project spec & rubric can be found [here](https://frontend.turing.io/projects/mo
 
 [Hang in there group project](https://joanafbrito.github.io/hang-in-there-boilerplate/)
 
-## Images/gifs:
-![Main page poster](https://user-images.githubusercontent.com/82066350/119276133-fb13ca00-bbcd-11eb-9071-83c7e934e71c.png)
+## Images:
+![Main page poster]()
 
-![Create your own poster](https://user-images.githubusercontent.com/82066350/119276290-dd933000-bbce-11eb-824a-e6936843f7ee.png)
+![Create your own poster main page](https://user-images.githubusercontent.com/79541611/119277866-0ed02800-bbf0-11eb-9d2a-a6ced8910c68.png)
 
-![Your created poster](https://user-images.githubusercontent.com/79541611/119277065-82236b00-bbeb-11eb-858b-36555de1cc6c.png")
+![Your created poster](https://user-images.githubusercontent.com/79541611/119277912-48089800-bbf0-11eb-9013-e8025d85d4a4.png)
 
-![Saved posters grid view](https://user-images.githubusercontent.com/79541611/119277225-65d3fe00-bbec-11eb-96c1-bd07fca0c2e0.png)
+![Saved posters grid view](https://user-images.githubusercontent.com/79541611/119277957-75eddc80-bbf0-11eb-8771-07500dead766.png)
 
-![Shows what you deleted from saved](https://user-images.githubusercontent.com/79541611/119277151-ed6d3d00-bbeb-11eb-9233-ed20ff9031af.png)
+![Shows what you deleted from saved](https://user-images.githubusercontent.com/79541611/119277986-a2095d80-bbf0-11eb-84e1-e53ec4cf7630.png)
 
 
 ## Future Additions:
