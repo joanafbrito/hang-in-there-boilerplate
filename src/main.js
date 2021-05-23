@@ -176,31 +176,43 @@ function addSavedPoster() {
       savedPosters[i].imageURL === selectImg.src &&
       savedPosters[i].title === selectTitle.innerHTML &&
       savedPosters[i].quote === selectQuote.innerHTML
-      )
-    { return;
+    ) {
+      return;
     }
   }
   savedPosters.push(currentPoster);
 };
 
 function showSavedPosterPage() {
-
   savedPostersGrid.innerHTML = ""
-
   savedPosterPage.classList.remove("hidden");
   mainPoster.classList.add("hidden");
-
   for (var i = 0; i < savedPosters.length; i++) {
     savedPostersGrid.innerHTML +=
-      `<div class="mini-poster">
+      `<div class="mini-poster" id="${savedPosters[i].id}">
    <img src="${savedPosters[i].imageURL}">
    <h2>${savedPosters[i].title}</h2>
    <h4>${savedPosters[i].quote}</h4>
  </div>`
+  }
+  deletingSavedPosters();
+};
+
+function deletingSavedPosters() {
+  var miniPoster = document.querySelectorAll('.mini-poster')
+    .forEach(item => {
+      item.addEventListener('dblclick', event => {
+        var id = event.target.closest("div").id
+        removeSavedPoster(id);
+        item.remove('id')
+      })
+    });
+};
+
+function removeSavedPoster(id) {
+  for (var i = 0; i < savedPosters.length; i++) {
+    if (parseInt(id) === savedPosters[i].id) {
+      savedPosters.splice(i, 1)
+    }
   };
-  var miniPoster = document.querySelectorAll('.mini-poster').forEach(item => {
-    item.addEventListener('dblclick', event => {
-      item.remove('id');
-    })
-  });
 };
