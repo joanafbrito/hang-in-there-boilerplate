@@ -45,3 +45,12 @@ Project spec & rubric can be found [here](https://frontend.turing.io/projects/mo
 * When a user clicks the **“Nevermind, take me back!”** or **“Back to Main”** buttons, we should only see the main poster section
 * On the new poster form view, users should be able to fill out the three input fields and then hit the save button
 * When the save button is clicked, several things will happen:
+      * Save the submitted data into the respective arrays (image URL into the images array, etc) so that future random posters can use the user-created data
+      * Use the values from the inputs to create a new instance of our Poster class
+      * Change back to the main poster view (hiding the form view again)
+      * Display the newly created poster image, title, and quote in the main view
+* When a user clicks the **“Save This Poster”** button, the current main poster will be added to the savedPosters array.
+* If a user clicks the **“Save This Poster”** more than once on a single poster, it will still only be saved once (no duplicates)
+* When a user clicks the **“Show Saved Posters”** button, we should see the saved posters section
+* All the posters in the savedPosters array should be displayed in the saved posters grid section
+* From the saved posters view, if a user double clicks a saved poster, it will be deleted.
