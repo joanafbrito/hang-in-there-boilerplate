@@ -35,3 +35,13 @@ Project spec & rubric can be found [here](https://frontend.turing.io/projects/mo
 * *HTML*
 * *CSS*
 * *JavaScript*
+
+## Instructions for running and viewing:
+
+* When the page loads, we should see a poster with a randomly selected image, title, and quote
+* Every time the user clicks the Show Random Poster button, a new random poster is displayed.
+* When a user clicks the **“Make Your Own Poster”** button, we should see the form, and the main poster should be hidden
+* When a user clicks the **“View Saved Posters”** button, we should see the saved posters area, and the main poster should be hidden
+* When a user clicks the **“Nevermind, take me back!”** or **“Back to Main”** buttons, we should only see the main poster section
+* On the new poster form view, users should be able to fill out the three input fields and then hit the save button
+* When the save button is clicked, several things will happen:
