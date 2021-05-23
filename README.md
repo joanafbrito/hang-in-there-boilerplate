@@ -54,3 +54,15 @@ Project spec & rubric can be found [here](https://frontend.turing.io/projects/mo
 * When a user clicks the **“Show Saved Posters”** button, we should see the saved posters section
 * All the posters in the savedPosters array should be displayed in the saved posters grid section
 * From the saved posters view, if a user double clicks a saved poster, it will be deleted.
+
+
+## Deploy link:
+
+## Images/gifs:
+
+## Future Additions:
+
+* Implement data validation and error handling into the form (such as provide error messages if data entered is not correct).
+* In the main poster view, allow users to click each piece of the poster (image, title, quote) to update just that piece with another random item from the appropriate array.
+* When a user single clicks a saved poster, create a modal to view it larger.
+* Allow users to drag and drop saved posters into whatever order they want them to appear.
