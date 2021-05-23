@@ -148,23 +148,6 @@ function showOwnPosterForm() {
   mainPoster.classList.add("hidden");
 };
 
-// function showSavedPosterPage() {
-//   savedPosterPage.classList.remove("hidden");
-//   mainPoster.classList.add("hidden");
-//
-//   var posterHTML = ""
-//
-//   for (var i =  0; i < savedPosters.length; i++) {
-//     posterHtml += `<artical class = "saved-posters-grid">
-//    <img src=${savedPosters[i].imageURL} />
-//    <h2>${savedPosters[i].title}</h2>
-//    <h4>${savedPosters[i].quote}</h4>
-//  </article>`;
-// }
-//
-//
-// };
-
 function goBackToMainFromForm() {
   mainPoster.classList.remove("hidden");
   posterForm.classList.add("hidden");
