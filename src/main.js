@@ -115,8 +115,7 @@ var quotes = [
   "A champion is defined not by their wins but by how they can recover when they fall."
 ];
 
-var savedPosters = ["something"];
-var currentPoster;
+var savedPosters = [];
 
 // event listeners go here 👇
 window.addEventListener('load', getRandomPoster);
@@ -125,10 +124,7 @@ ownPosterButton.addEventListener('click', showOwnPosterForm);
 viewSavedPosterButton.addEventListener('click', showSavedPosterPage);
 neverMindButton.addEventListener('click', goBackToMainFromForm);
 backToMainButton.addEventListener('click', goBackToMainFromSaved);
-makePosterButton.addEventListener('click', function(e) {
-    e.preventDefault();
-    makePosterDisplayPoster();
-});
+makePosterButton.addEventListener('click', makePosterDisplayPoster);
 saveThisPosterButton.addEventListener('click', addSavedPoster);
 // functions and event handlers go here 👇
 // (we've provided one for you to get you started)!
@@ -158,23 +154,32 @@ function goBackToMainFromSaved() {
   savedPosterPage.classList.add("hidden");
 };
 
-function makePosterDisplayPoster() {
- var imageUrl = inputPosterImageUrl.value;
- var posterTitle = inputPosterTitle.value;
- var posterQuote = inputPosterQuote.value;
-      images.push(imageUrl);
-      titles.push(posterTitle);
-      quotes.push(posterQuote);
+function makePosterDisplayPoster(event) {
+  event.preventDefault();
+  var imageUrl = inputPosterImageUrl.value;
+  var posterTitle = inputPosterTitle.value;
+  var posterQuote = inputPosterQuote.value;
+  images.push(imageUrl);
+  titles.push(posterTitle);
+  quotes.push(posterQuote);
   var newPoster = new Poster(imageUrl, posterTitle, posterQuote);
   goBackToMainFromForm();
-      selectImg.src = newPoster.imageURL;
-      selectTitle.innerHTML = newPoster.title;
-      selectQuote.innerHTML = newPoster.quote;
-
+  selectImg.src = newPoster.imageURL;
+  selectTitle.innerHTML = newPoster.title;
+  selectQuote.innerHTML = newPoster.quote;
 };
 
 function addSavedPoster() {
   var currentPoster = new Poster(selectImg.src, selectTitle.innerHTML, selectQuote.innerHTML);
+  for (var i = 0; i < savedPosters.length; i++) {
+    if (
+      savedPosters[i].imageURL === selectImg.src &&
+      savedPosters[i].title === selectTitle.innerHTML &&
+      savedPosters[i].quote === selectQuote.innerHTML
+      )
+    { return;
+    }
+  }
   savedPosters.push(currentPoster);
 };
 
@@ -185,13 +190,13 @@ function showSavedPosterPage() {
   savedPosterPage.classList.remove("hidden");
   mainPoster.classList.add("hidden");
 
-  for (var i =  0; i < savedPosters.length; i++) {
+  for (var i = 0; i < savedPosters.length; i++) {
     savedPostersGrid.innerHTML +=
-    `<div class="mini-poster">
+      `<div class="mini-poster">
    <img src="${savedPosters[i].imageURL}">
    <h2>${savedPosters[i].title}</h2>
    <h4>${savedPosters[i].quote}</h4>
  </div>`
-};
+  };
 
 };
