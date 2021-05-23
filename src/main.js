@@ -198,5 +198,9 @@ function showSavedPosterPage() {
    <h4>${savedPosters[i].quote}</h4>
  </div>`
   };
-
+  var miniPoster = document.querySelectorAll('.mini-poster').forEach(item => {
+    item.addEventListener('dblclick', event => {
+      item.remove('id');
+    })
+  });
 };
