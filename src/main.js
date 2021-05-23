@@ -121,10 +121,10 @@ var savedPosters = [];
 window.addEventListener('load', getRandomPoster);
 randomPosterButton.addEventListener('click', getRandomPoster);
 ownPosterButton.addEventListener('click', showOwnPosterForm);
-viewSavedPosterButton.addEventListener('click', showSavedPosterPage);
-neverMindButton.addEventListener('click', goBackToMainFromForm);
-backToMainButton.addEventListener('click', goBackToMainFromSaved);
-makePosterButton.addEventListener('click', makePosterDisplayPoster);
+viewSavedPosterButton.addEventListener('click', showSavedPosters);
+neverMindButton.addEventListener('click', goMainFromForm);
+backToMainButton.addEventListener('click', goMainFromSaved);
+makePosterButton.addEventListener('click', makePoster);
 saveThisPosterButton.addEventListener('click', addSavedPoster);
 // functions and event handlers go here 👇
 // (we've provided one for you to get you started)!
@@ -144,17 +144,17 @@ function showOwnPosterForm() {
   mainPoster.classList.add("hidden");
 };
 
-function goBackToMainFromForm() {
+function goMainFromForm() {
   mainPoster.classList.remove("hidden");
   posterForm.classList.add("hidden");
 };
 
-function goBackToMainFromSaved() {
+function goMainFromSaved() {
   mainPoster.classList.remove("hidden");
   savedPosterPage.classList.add("hidden");
 };
 
-function makePosterDisplayPoster(event) {
+function makePoster(event) {
   event.preventDefault();
   var imageUrl = inputPosterImageUrl.value;
   var posterTitle = inputPosterTitle.value;
@@ -163,7 +163,7 @@ function makePosterDisplayPoster(event) {
   titles.push(posterTitle);
   quotes.push(posterQuote);
   var newPoster = new Poster(imageUrl, posterTitle, posterQuote);
-  goBackToMainFromForm();
+  goMainFromForm();
   selectImg.src = newPoster.imageURL;
   selectTitle.innerHTML = newPoster.title;
   selectQuote.innerHTML = newPoster.quote;
@@ -183,7 +183,7 @@ function addSavedPoster() {
   savedPosters.push(currentPoster);
 };
 
-function showSavedPosterPage() {
+function showSavedPosters() {
   savedPostersGrid.innerHTML = ""
   savedPosterPage.classList.remove("hidden");
   mainPoster.classList.add("hidden");
@@ -195,16 +195,16 @@ function showSavedPosterPage() {
    <h4>${savedPosters[i].quote}</h4>
  </div>`
   }
-  deletingSavedPosters();
+  deleteSavedPosters();
 };
 
-function deletingSavedPosters() {
+function deleteSavedPosters() {
   var miniPoster = document.querySelectorAll('.mini-poster')
     .forEach(item => {
       item.addEventListener('dblclick', event => {
         var id = event.target.closest("div").id
         removeSavedPoster(id);
-        item.remove('id')
+        item.remove(id)
       })
     });
 };
