@@ -61,11 +61,15 @@ Project spec & rubric can be found [here](https://frontend.turing.io/projects/mo
 [Hang in there group project](https://joanafbrito.github.io/hang-in-there-boilerplate/)
 
 ## Images/gifs:
-![Main page Poster](https://user-images.githubusercontent.com/82066350/119276133-fb13ca00-bbcd-11eb-9071-83c7e934e71c.png)
+![Main page poster](https://user-images.githubusercontent.com/82066350/119276133-fb13ca00-bbcd-11eb-9071-83c7e934e71c.png)
 
-![Create your own Poster](https://user-images.githubusercontent.com/82066350/119276290-dd933000-bbce-11eb-824a-e6936843f7ee.png)
+![Create your own poster](https://user-images.githubusercontent.com/82066350/119276290-dd933000-bbce-11eb-824a-e6936843f7ee.png)
 
+![Your created poster](https://user-images.githubusercontent.com/79541611/119277065-82236b00-bbeb-11eb-858b-36555de1cc6c.png")
 
+![Saved posters grid view](https://user-images.githubusercontent.com/79541611/119277225-65d3fe00-bbec-11eb-96c1-bd07fca0c2e0.png)
+
+![Shows what you deleted from saved](https://user-images.githubusercontent.com/79541611/119277151-ed6d3d00-bbeb-11eb-9233-ed20ff9031af.png)
 
 
 ## Future Additions:
