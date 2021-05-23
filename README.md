@@ -28,3 +28,10 @@ Project spec & rubric can be found [here](https://frontend.turing.io/projects/mo
 ## Project Manager:
 
 * Heather Faerber
+
+
+## Technologies used:
+
+* *HTML*
+* *CSS*
+* *JavaScript*
